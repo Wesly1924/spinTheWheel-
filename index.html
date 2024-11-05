@@ -68,34 +68,33 @@
         getFirestore,
         collection,
         getDocs,
-           } from "https://www.gstatic.com/firebasejs/10.13/firebase-firestore.js";
+      } from "https://www.gstatic.com/firebasejs/10.13/firebase-firestore.js";
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
-      
+
       // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyAAu8wvXAKLS8TWNmqDuSQ_5kgPs0xqaQo",
-        authDomain: "spin-the-wheel-77deb.firebaseapp.com",
-        projectId: "spin-the-wheel-77deb",
-        storageBucket: "spin-the-wheel-77deb.appspot.com",
-        messagingSenderId: "234784252508",
-        appId: "1:234784252508:web:03eb977ec7ff951120bc99",
-      };
-      
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      
-      const db = getFirestore(app);
-      
+      // const firebaseConfig = {
+      //   apiKey: "AIzaSyAAu8wvXAKLS8TWNmqDuSQ_5kgPs0xqaQo",
+      //   authDomain: "spin-the-wheel-77deb.firebaseapp.com",
+      //   projectId: "spin-the-wheel-77deb",
+      //   storageBucket: "spin-the-wheel-77deb.appspot.com",
+      //   messagingSenderId: "234784252508",
+      //   appId: "1:234784252508:web:03eb977ec7ff951120bc99",
+      // };
+
+      // // Initialize Firebase
+      // const app = initializeApp(firebaseConfig);
+
+      // const db = getFirestore(app);
+
       // Get a list of cities from your database
-      async function getCities(db) {
-        const citiesCol = collection(db, "Prizes");
-        const citySnapshot = await getDocs(citiesCol);
-      
-        citySnapshot.docs.forEach((doc) => {
-          console.log("doc", doc.data());
-        });
-      }
+      // async function getCities(db) {
+      // const citiesCol = collection(db, "Prizes");
+      // const citySnapshot = await getDocs(citiesCol);
+
+      // citySnapshot.docs.forEach((doc) => {
+      //   console.log("doc", doc.data());
+      // });
 
       let now = Math.floor(Date.now() / 1000);
       let lastwin = localStorage.getItem("lastwin")
