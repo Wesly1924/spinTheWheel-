@@ -1,0 +1,31 @@
+[debug] [2024-11-04T07:32:24.290Z] ----------------------------------------------------------------------
+[debug] [2024-11-04T07:32:24.292Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Wesly Koothupile\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-11-04T07:32:24.292Z] CLI Version:   13.23.1
+[debug] [2024-11-04T07:32:24.293Z] Platform:      win32
+[debug] [2024-11-04T07:32:24.293Z] Node Version:  v20.17.0
+[debug] [2024-11-04T07:32:24.293Z] Time:          Mon Nov 04 2024 09:32:24 GMT+0200 (Central Africa Time)
+[debug] [2024-11-04T07:32:24.293Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-04T07:32:24.361Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-04T07:32:24.361Z] > authorizing via signed-in user (koothupilewesly@gmail.com)
+[debug] [2024-11-04T07:32:24.361Z] [iam] checking project spinthewheel-dc7d5 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-11-04T07:32:24.362Z] Checked if tokens are valid: true, expires at: 1730709075342
+[debug] [2024-11-04T07:32:24.362Z] Checked if tokens are valid: true, expires at: 1730709075342
+[debug] [2024-11-04T07:32:24.363Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/spinthewheel-dc7d5:testIamPermissions [none]
+[debug] [2024-11-04T07:32:24.363Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/spinthewheel-dc7d5:testIamPermissions x-goog-quota-user=projects/spinthewheel-dc7d5
+[debug] [2024-11-04T07:32:24.364Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/spinthewheel-dc7d5:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-11-04T07:32:26.085Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/spinthewheel-dc7d5:testIamPermissions 200
+[debug] [2024-11-04T07:32:26.086Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/spinthewheel-dc7d5:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-11-04T07:32:26.086Z] Checked if tokens are valid: true, expires at: 1730709075342
+[debug] [2024-11-04T07:32:26.086Z] Checked if tokens are valid: true, expires at: 1730709075342
+[debug] [2024-11-04T07:32:26.086Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spinthewheel-dc7d5 [none]
+[debug] [2024-11-04T07:32:26.784Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/spinthewheel-dc7d5 200
+[debug] [2024-11-04T07:32:26.785Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/spinthewheel-dc7d5 {"projectId":"spinthewheel-dc7d5","projectNumber":"37570993567","displayName":"spinTheWheel","name":"projects/spinthewheel-dc7d5","resources":{"hostingSite":"spinthewheel-dc7d5"},"state":"ACTIVE","etag":"1_d73ccaa5-ac86-4e5d-bf03-6057300ae149"}
+[info] 
+[info] === Deploying to 'spinthewheel-dc7d5'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-11-04T07:32:26.790Z] Checked if tokens are valid: true, expires at: 1730709075342
+[debug] [2024-11-04T07:32:26.790Z] Checked if tokens are valid: true, expires at: 1730709075342
+[debug] [2024-11-04T07:32:26.790Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/spinthewheel-dc7d5/versions [none]
+[debug] [2024-11-04T07:32:26.790Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/spinthewheel-dc7d5/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
